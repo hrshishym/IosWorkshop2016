@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="janken" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pa.png" translatesAutoresizingMaskIntoConstraints="NO" id="BXo-Pr-K4B">
+                                <rect key="frame" x="225" y="40" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="92d-wV-8Lg"/>
+                                    <constraint firstAttribute="width" constant="150" id="m1M-1u-sxY"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pa.png" translatesAutoresizingMaskIntoConstraints="NO" id="zE1-2r-IYh">
+                                <rect key="frame" x="225" y="200" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="lOp-2k-Idt"/>
+                                    <constraint firstAttribute="width" constant="150" id="o4h-lg-bIB"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehu-MB-eYD">
+                                <rect key="frame" x="263" y="360" width="75" height="30"/>
+                                <state key="normal" title="最初はグー"/>
+                                <connections>
+                                    <action selector="tapStart" destination="BYZ-38-t0r" eventType="touchUpInside" id="B4Y-8Y-9HF"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yAj-1D-Sqz">
+                                <rect key="frame" x="40" y="451" width="520" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpd-aM-R5U">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="グー"/>
+                                        <connections>
+                                            <action selector="tapGu" destination="BYZ-38-t0r" eventType="touchUpInside" id="dX5-tX-yO0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11a-cL-IQi">
+                                        <rect key="frame" x="180" y="0.0" width="160" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="チョキ"/>
+                                        <connections>
+                                            <action selector="tapChoki" destination="BYZ-38-t0r" eventType="touchUpInside" id="t0f-aG-D5s"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EO-ha-WSE">
+                                        <rect key="frame" x="360" y="0.0" width="160" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="パー"/>
+                                        <connections>
+                                            <action selector="tapPa" destination="BYZ-38-t0r" eventType="touchUpInside" id="qFY-A9-2d2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="じゃんけんアプリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tn8-EY-9Nk">
+                                <rect key="frame" x="232" y="410" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BXo-Pr-K4B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6ff-kR-s1q"/>
+                            <constraint firstItem="Tn8-EY-9Nk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Rs-1N-388"/>
+                            <constraint firstItem="zE1-2r-IYh" firstAttribute="top" secondItem="BXo-Pr-K4B" secondAttribute="bottom" constant="10" id="AWd-3j-ozU"/>
+                            <constraint firstItem="BXo-Pr-K4B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="CRE-82-YNX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yAj-1D-Sqz" secondAttribute="trailing" constant="20" id="CTu-DS-AgR"/>
+                            <constraint firstItem="ehu-MB-eYD" firstAttribute="top" secondItem="zE1-2r-IYh" secondAttribute="bottom" constant="10" id="IgO-Uk-bGM"/>
+                            <constraint firstItem="zE1-2r-IYh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X5t-Ol-y4B"/>
+                            <constraint firstItem="yAj-1D-Sqz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Xcb-Zs-WzJ"/>
+                            <constraint firstItem="Tn8-EY-9Nk" firstAttribute="top" secondItem="ehu-MB-eYD" secondAttribute="bottom" constant="20" id="liB-hi-KOu"/>
+                            <constraint firstItem="yAj-1D-Sqz" firstAttribute="top" secondItem="Tn8-EY-9Nk" secondAttribute="bottom" constant="20" id="mFY-4Z-A9r"/>
+                            <constraint firstItem="ehu-MB-eYD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uCk-ua-O3d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="computerImageView" destination="BXo-Pr-K4B" id="n52-Ss-spQ"/>
+                        <outlet property="messageLabel" destination="Tn8-EY-9Nk" id="GxO-0F-qvm"/>
+                        <outlet property="playerImageView" destination="zE1-2r-IYh" id="ra2-NH-ZlL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pa.png" width="450" height="450"/>
+    </resources>
+</document>
